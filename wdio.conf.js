@@ -1,3 +1,5 @@
+const path = require('path');
+
 exports.config = {
     //
     // ====================
@@ -55,8 +57,7 @@ exports.config = {
         // capabilities for local Appium web tests on an Android Emulator
             "appium:platformName": "Android",
             "appium:deviceName": "Pixel_6_API_32",
-            "appium:app": "/Users/testvagrant/Downloads/apk/Android-MyDemoAppRN.1.3.0.build-244.apk",
-            // "appium:app": `${process.cwd()}/app/apk/Android-MyDemoAppRN.1.3.0.build-244.apk`,
+            "appium:app": path.join(process.cwd(), "/apk/android/ApiDemos-debug.apk"),
             "appium:automationName": "UiAutomator2",
             "appium:udid": "emulator-5554"
     }],
